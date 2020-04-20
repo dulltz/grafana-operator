@@ -339,6 +339,10 @@ func getContainers(cr *v1alpha1.Grafana, configHash, dsHash string) []v13.Contai
 					},
 				},
 			},
+			{
+				Name: "HTTPS_PROXY",
+				Value: "http://squid.internet-egress.svc.cluster.local:3128",
+			},
 		},
 		Resources:                getResources(cr),
 		VolumeMounts:             getVolumeMounts(cr),
